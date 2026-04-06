@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAML - Futebol Virtual</title>
+    <title>VCF - Futebol Virtual</title>
     <link rel="stylesheet" href="style.css">
     <!-- Importando uma fonte moderna do Google -->
     <link href="https://googleapis.com" rel="stylesheet">
@@ -14,23 +14,31 @@
     <div class="overlay"></div>
 
     <header>
-        <div class="logo">
-            <img src="https://placeholder.com" alt="Logo"> <!-- Substitua pelo seu logo -->
-            <span>SAML</span>
-        </div>
-        <div class="menu-icon">☰</div>
-    </header>
+    <!-- REMOVIDO O LOGO: Agora só tem o nome da liga -->
+    <div class="logo">
+        <span>VCF Brasil</span>
+    </div>
+    
+    <!-- MENU HAMBÚRGUER (As 3 barrinhas) -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-    <main class="hero">
-        <h1>FUTEBOL VIRTUAL <br> <span>DE ELITE</span></h1>
-        
-        <p>Bem-vindo à VCF. A casa do Modified Professional Soccer no Brasil. Organização profissional, competição de elite.</p>
+    <!-- AS ABAS (O que aparece ao clicar) -->
+    <nav id="nav-menu">
+        <a href="index.html">Início</a>
+        <a href="regras.html">Regras</a>
+        <a href="tabela.html">Tabela</a>
+        <a href="inscricoes.html">Inscrições</a>
+    </nav>
+</header>
 
-        <div class="buttons">
-            <a href="#" class="btn-primary">Entrar na Liga &rarr;</a>
-            <a href="#" class="btn-secondary">
-                <img src="https://flaticon.com" width="20"> 
-                Entrar no Discord
+<!-- SCRIPT PARA ABRIR/FECHAR O MENU -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
             </a>
         </div>
     </main>

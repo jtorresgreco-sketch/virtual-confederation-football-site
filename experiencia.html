@@ -4,52 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiência VCF - Plaza</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { background: #050505; color: white; font-family: sans-serif; margin: 0; text-align: center; padding: 20px; }
-        header { display: flex; justify-content: space-between; padding: 20px; font-weight: bold; }
-        h1 { font-size: 2rem; margin-top: 50px; text-transform: uppercase; letter-spacing: 2px; }
-        .sub { color: #888; margin-bottom: 40px; font-size: 0.9rem; }
-        .grid { display: grid; grid-template-columns: 1fr; gap: 15px; max-width: 800px; margin: 0 auto; }
-        .card { background: #111; border: 1px solid #222; padding: 25px; border-radius: 15px; }
-        .card h3 { margin: 10px 0; font-size: 1.1rem; }
-        .card p { color: #777; font-size: 0.8rem; line-height: 1.4; }
-        .btn { display: inline-block; background: #e63946; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 40px; }
+        /* Estilo específico para os cards desta página */
+        body { background: #050505; color: white; font-family: sans-serif; margin: 0; text-align: center; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 15px; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .card { background: #111; border: 1px solid #222; padding: 25px; border-radius: 15px; text-align: center; }
+        .card h3 { margin: 10px 0; color: white; }
+        .card p { color: #888; font-size: 0.85rem; }
         @media (min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
+        
+        /* Menu que estava sumindo */
+        #nav-menu { display: none; position: absolute; top: 70px; right: 20px; background: #111; padding: 20px; border-radius: 10px; flex-direction: column; gap: 10px; z-index: 1000; border: 1px solid #333; }
+        #nav-menu.active { display: flex; }
+        #nav-menu a { color: white; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <header>
-        <div>VCF - PLAZA</div>
-        <div>☰</div>
+    <header style="display: flex; justify-content: space-between; padding: 20px; align-items: center;">
+        <div class="logo">VCF - PLAZA</div>
+        <div class="menu-icon" onclick="toggleMenu()" style="font-size: 2rem; cursor: pointer;">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Início</a>
+            <a href="experiencia.html">Experiência</a>
+        </nav>
     </header>
 
-    <h1>A EXPERIÊNCIA VCF - PLAZA</h1>
-    <p class="sub">Onde a paixão pelo futebol virtual encontra organização profissional.</p>
+    <h1 style="margin-top: 40px;">A EXPERIÊNCIA VCF - PLAZA</h1>
+    <p style="color: #888;">Onde a paixão pelo futebol encontra organização.</p>
 
     <div class="grid">
-        <div class="card">
-            <div>📱</div>
-            <h3>Otimizado para Mobile</h3>
-            <p>Controles de toque precisos para competição mobile</p>
-        </div>
-        <div class="card">
-            <div>🌐</div>
-            <h3>Baixa Latência</h3>
-            <p>Infraestrutura na América do Sul para desempenho ideal</p>
-        </div>
-        <div class="card">
-            <div>🎮</div>
-            <h3>Pronto para Console</h3>
-            <p>Suporte de alta precisão para todos dispositivos</p>
-        </div>
-        <div class="card">
-            <div>👥</div>
-            <h3>Comunidade Ativa</h3>
-            <p>Jogadores dedicados e cenário competitivo</p>
-        </div>
+        <div class="card"><h3>Otimizado para Mobile</h3><p>Controles de toque precisos.</p></div>
+        <div class="card"><h3>Baixa Latência</h3><p>Desempenho ideal na América do Sul.</p></div>
+        <div class="card"><h3>Pronto para Console</h3><p>Suporte para todos dispositivos.</p></div>
+        <div class="card"><h3>Comunidade Ativa</h3><p>Cenário competitivo dedicado.</p></div>
     </div>
 
-    <a href="" class="btn">Entre já em nossa Experiência!</a>
+    <a href="LINK_DO_SEU_DISCORD" class="btn-primary" style="display: inline-block; background: #e63946; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 30px;">Entre já em nossa Experiência!</a>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
 </body>
-  </html>
-  
+</html>

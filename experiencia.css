@@ -1,0 +1,12 @@
+.container { padding: 30px 15px; text-align: center; color: white; }
+.features-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 30px; }
+.card { background: #111; border: 1px solid #333; padding: 25px; border-radius: 15px; }
+.card h3 { font-size: 1.1rem; margin: 10px 0; }
+.card p { font-size: 0.85rem; color: #999; }
+.btn-primary { 
+    display: inline-block; background: #e63946; color: white; 
+    padding: 15px 25px; border-radius: 8px; text-decoration: none; 
+    font-weight: bold; margin-top: 30px; 
+}
+/* Se o celular for grande, mostra 2 colunas */
+@media (min-width: 600px) { .features-grid { grid-template-columns: 1fr 1fr; } }
